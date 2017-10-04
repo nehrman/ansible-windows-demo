@@ -1,0 +1,6 @@
+[web]
+winweb01.testlab.local
+winweb02.testlab.local
+
+[db]
+windb01.testlab.local

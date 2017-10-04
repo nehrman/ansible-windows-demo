@@ -1,0 +1,18 @@
+---
+- name: Ensure Notepad++ is installed using chocolatey
+  win_chocolatey: 
+    name: notepadplusplus
+    state: present
+
+- name: Activate .Net 3.5 Features
+  win_feature:
+    name: NET-Framework-Features
+    state: present
+    include_sub_features: yes
+
+- name : Create localdamin user and place in Administrators group
+  win_user: 
+    name: Nicolas
+    password: "P@sswOrd1!"
+    groups: ["Administrators"]
+    state: present
