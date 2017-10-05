@@ -1,5 +1,5 @@
 ---
-- name: Ensure Notepad++ is not installed using chocolatey
+- name: Ensure Notepad++ is installed using chocolatey
   win_chocolatey:
     name: notepadplusplus
     state: present
