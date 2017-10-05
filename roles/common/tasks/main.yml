@@ -12,7 +12,7 @@
 
 - name : Create localdamin user and place in Administrators group
   win_user:
-    name: {{ item }}
+    name: "{{ item }}"
     password: "P@sswOrd1!"
     groups: ["Administrators"]
     state: present
