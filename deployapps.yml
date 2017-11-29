@@ -1,8 +1,8 @@
 ---
 # Deploy one ore more apps on Windows Hosts
 - hosts: windows
-  become: true
-  become_method: runas
+  # become: true
+  # become_method: runas
 
   tasks:
     - name: Deploy applications on "{{ ansible_hostname }}"
