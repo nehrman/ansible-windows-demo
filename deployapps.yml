@@ -5,8 +5,8 @@
   become_method: runas
 
   tasks:
-    name: Deploy applications on "{{ ansible_hostname }}"
-    win_chocolatey:
-      name: "{{ item }}"
-      state: present
-    with_items: "{{ apps }}"
+    - name: Deploy applications on "{{ ansible_hostname }}"
+      win_chocolatey:
+        name: "{{ item }}"
+        state: present
+      with_items: "{{ apps }}"
