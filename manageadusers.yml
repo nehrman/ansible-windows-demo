@@ -8,6 +8,7 @@
     - name: Manage Active Directory user "{{ ad_username }}"
       win_domain_user:
          name: "{{ ad_username }}"
+         upn: "{{ ad_username}}@testlab.local"
          firstname: "{{ ad_firstname }}"
          surname: "{{ ad_surname }}"
          company: "{{ ad_company }}"
