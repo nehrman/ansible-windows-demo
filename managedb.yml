@@ -1,5 +1,5 @@
 ---
-# Create databases on existing SQL instances
+# Manage databases on existing SQL instances
 - hosts: localhost
   connection: local
 
