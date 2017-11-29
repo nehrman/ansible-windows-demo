@@ -18,5 +18,5 @@
          street: "{{ ad_street }}"
          city: "{{ ad_city }}"
          state_province: "{{ ad_state }}"
-         postal_code: "{{ ad_postacl_code }}"
+         postal_code: "{{ ad_postal_code }}"
          country: "{{ ad_country }}"
