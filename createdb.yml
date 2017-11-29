@@ -1,6 +1,7 @@
 ---
 # Create databases on existing SQL instances
-- hosts: sqlserver
+- hosts: localhost
+  connection: local
 
   tasks:
     - name: Ensure "{{ db_name }}" is present on "{{ ansible_hostname }}"
