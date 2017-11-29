@@ -1,0 +1,22 @@
+---
+# Manage Users in Active Directory
+- hosts: dc
+  # become: true
+  # become_method: runas
+
+  tasks:
+    - name: Manage Active Directory user "{{ ad_username }}"
+      win_domain_user:
+         name: "{{ ad_username }}"
+         firstname: "{{ ad_firstname }}"
+         surname: "{{ ad_surname }}"
+         company: "{{ ad_company }}"
+         password: "{{ ad_userpwd }}"
+         state: present
+         groups:
+           - Domain Admins
+         street: "{{ ad_street }}"
+         city: "{{ ad_city }}"
+         state_province: "{{ ad_state }}"
+         postal_code: "{{ ad_postacl_code }}"
+         country: "{{ ad_country }}"
