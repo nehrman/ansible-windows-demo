@@ -10,4 +10,4 @@
         login_host: "{{ db_host }}"
         login_user: "{{ db_host_user }}"
         login_password: "{{ db_host_pwd }}"
-        state: present
+        state: "{{ db_state }}"
