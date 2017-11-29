@@ -14,8 +14,7 @@
          company: "{{ ad_company }}"
          password: "{{ ad_userpwd }}"
          state: present
-         groups:
-           - Domain Admins
+         groups: "{{ ad_groups }}"
          street: "{{ ad_street }}"
          city: "{{ ad_city }}"
          state_province: "{{ ad_state }}"
