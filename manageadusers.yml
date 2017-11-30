@@ -13,7 +13,7 @@
          surname: "{{ ad_surname }}"
          company: "{{ ad_company }}"
          password: "{{ ad_userpwd }}"
-         state: present
+         state: "{{ ad_user_state }}"
          groups: "{{ ad_groups }}"
          street: "{{ ad_street }}"
          city: "{{ ad_city }}"
