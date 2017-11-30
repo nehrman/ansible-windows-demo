@@ -1,12 +1,15 @@
 ---
-# Deploy one ore more apps on Windows Hosts
-- hosts: windows
+# Manage Groups in Active Directory
+- hosts: dc
   # become: true
   # become_method: runas
 
   tasks:
-    - name: Deploy "{{ apps }}" on "{{ ansible_hostname }}"
-      win_chocolatey:
-        name: "{{ item }}"
-        state: present
-      with_items: "{{ apps }}"
+    - name: Manage Active Directory group "{{ ad_group_name }}"
+      win_domain_group:
+         name: "{{ ad_group_name }}"
+         scope: "{{ ad_group_scope }}"
+         category: "{{ ad_group_category }}"
+         organizational_unit: "{{ ad_group_ou }}"
+         description: "{{ ad_group_des }}"
+         state: present
