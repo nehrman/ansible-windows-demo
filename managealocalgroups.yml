@@ -1,0 +1,12 @@
+---
+# Manage Groups Membership in Local Machine
+- hosts: dc
+  # become: true
+  # become_method: runas
+
+  tasks:
+    - name: Manage Active Directory group "{{ ad_group_name }}"
+      win_group_membership:
+         name: "{{ local_group_name }}"
+         members: "{{ ad_group_members }}"
+         state: "{{ local_group_state }}"
