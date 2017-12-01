@@ -1,6 +1,6 @@
 ---
 # Deploy one ore more apps on Windows Hosts
-- hosts: windows
+- hosts: all
   # become: true
   # become_method: runas
 
