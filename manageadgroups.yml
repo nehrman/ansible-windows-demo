@@ -3,7 +3,14 @@
 - hosts: dc
   # become: true
   # become_method: runas
-
+  vars:
+    nad_group_name: ''
+    ad_group_scope: ''
+    ad_group_category: ''
+    ad_group_ou: ''
+    ad_group_des: ''
+    ad_group_state: ''
+    
   tasks:
     - name: Manage Active Directory group "{{ ad_group_name }}"
       win_domain_group:
@@ -12,4 +19,4 @@
          category: "{{ ad_group_category }}"
          organizational_unit: "{{ ad_group_ou }}"
          description: "{{ ad_group_des }}"
-         state: present
+         state: "{{ ad_group_state }}"

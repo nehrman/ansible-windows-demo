@@ -2,6 +2,12 @@
 # Manage databases on existing SQL instances
 - hosts: localhost
   connection: local
+  vars:
+    db_name: ''
+    db_host: ''
+    db_host_user: ''
+    db_host_pwd: ''
+    db_state: ''
 
   tasks:
     - name: Ensure "{{ db_name }}" is present on "{{ ansible_hostname }}"

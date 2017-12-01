@@ -3,7 +3,11 @@
 - hosts: windows
   # become: true
   # become_method: runas
-
+  vars:
+    local_group_name: ''
+    mad_group_members: ''
+    local_group_state: ''
+    
   tasks:
     - name: Manage Local group "{{ local_group_name }}" on "{{ ansible_hostname }}"
       win_group_membership:

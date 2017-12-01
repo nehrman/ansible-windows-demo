@@ -3,6 +3,20 @@
 - hosts: dc
   # become: true
   # become_method: runas
+  vars:
+    ad_username: ''
+    ad_username}: ''
+    ad_firstname: ''
+    ad_surname: ''
+    ad_company: ''
+    ad_userpwd: ''
+    ad_user_state: ''
+    ad_groups: ''
+    ad_street: ''
+    ad_city: ''
+    ad_state: ''
+    ad_postal_code: ''
+    ad_country: ''
 
   tasks:
     - name: Manage Active Directory user "{{ ad_username }}"
