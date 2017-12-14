@@ -12,7 +12,7 @@
 </p>
 
 <h2>Manage SQL DB for existing instances:</h2>
-<p>To work, you need to install <b>pymssql</b> on the ansible / ansible tower host using pip : <b>pip install pymssql</b>
+<p>To make it works, you need to install <b>pymssql</b> on the ansible / ansible tower host using pip : <b>pip install pymssql</b>
 Because it's using local ansible host to execute the remote SQL command, we define <b>hosts: localhost</b> with <b>connection: local</b></p>
 <p>To run this playbook, you need to define those variables :
 <ul style="list-style-type:none">  
