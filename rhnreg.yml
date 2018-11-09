@@ -3,7 +3,7 @@
   hosts: all
   
   tasks:
-    - name: Ensure {{ ansible_host }} is registered on Spacewalk system
+    - name: Ensure {{ inventory_hostname }} is registered on Spacewalk system
       shell: |
         wget --no-proxy http://ecarbsul0770h01.dc.admin.europcar.vwfs-ad/pub/RHN-ORG-TRUSTED-SSL-CERT 
         rhnreg_ks --serverUrl=https://ecarbsul0770h01.dc.admin.europcar.vwfs-ad/XMLRPC --sslCACert=/usr/share/rhn/RHN-ORG-TRUSTED-SSL-CERT --activationkey=2-uat-crit-rhel7-x86_64-std
